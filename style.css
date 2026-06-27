@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CSS Sample Page</title>
+    <style>
+        /* 1. GLOBAL VARIABLES & RESET */
+        :root {
+            --primary-color: #3498db;
+            --dark-color: #2c3e50;
+            --light-color: #f4f6f7;
+            --text-color: #333333;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            padding: 20px;
+        }
+
+        /* 2. TYPOGRAPHY & ELEMENTS */
+        h1 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* 3. COMPONENT: CLASS SELECTOR */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        /* Pseudo-class for hover behavior */
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* 4. LAYOUT: FLEXBOX CONFIGURATION */
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .flex-card {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 5. RESPONSIVE DESIGN (MEDIA QUERY) */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Website</h1>
+    <p>This paragraph displays default styling configured via universal and element selectors.</p>
+    
+    <a href="#" class="btn-primary">Click Me</a>
+
+    <!-- Flexbox section -->
+    <div class="flex-container">
+        <div class="flex-card">
+            <h3>Card One</h3>
+            <p>This card stacks vertically on mobile viewports automatically.</p>
+        </div>
+        <div class="flex-card">
+            <h3>Card Two</h3>
+            <p>This layout uses CSS flexbox architecture.</p>
+        </div>
+    </div>
+
+</body>
+</html>
