@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern CSS Sample Page</title>
-
     <style>
         /* 1. GLOBAL VARIABLES & RESET */
         :root {
@@ -29,7 +28,7 @@
             padding: 20px;
         }
 
-        /* Typography */
+        /* 2. TYPOGRAPHY & ELEMENTS */
         h1 {
             color: var(--dark-color);
             margin-bottom: 15px;
@@ -41,7 +40,7 @@
             font-size: 1.1rem;
         }
 
-        /* Button */
+        /* 3. COMPONENT: CLASS SELECTOR */
         .btn-primary {
             display: inline-block;
             background-color: var(--primary-color);
@@ -54,12 +53,13 @@
             transition: var(--transition);
         }
 
+        /* Pseudo-class for hover behavior */
         .btn-primary:hover {
             background-color: #2980b9;
             transform: translateY(-2px);
         }
 
-        /* Flexbox */
+        /* 4. LAYOUT: FLEXBOX CONFIGURATION */
         .flex-container {
             display: flex;
             gap: 20px;
@@ -74,112 +74,32 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        /* Contact Section */
-        .contact {
-            width: 80%;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .contact h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .contact label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-            color: #555;
-        }
-
-        .contact input,
-        .contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .contact textarea {
-            resize: vertical;
-        }
-
-        .contact button {
-            width: 100%;
-            margin-top: 20px;
-            padding: 12px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .contact button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsive */
+        /* 5. RESPONSIVE DESIGN (MEDIA QUERY) */
         @media (max-width: 768px) {
             .flex-container {
                 flex-direction: column;
             }
-
-            .contact {
-                width: 95%;
-            }
         }
     </style>
 </head>
-
 <body>
 
     <h1>Welcome to My Website</h1>
-
     <p>This paragraph displays default styling configured via universal and element selectors.</p>
-
+    
     <a href="#" class="btn-primary">Click Me</a>
 
-    <!-- Flexbox Section -->
+    <!-- Flexbox section -->
     <div class="flex-container">
         <div class="flex-card">
             <h3>Card One</h3>
             <p>This card stacks vertically on mobile viewports automatically.</p>
         </div>
-
         <div class="flex-card">
             <h3>Card Two</h3>
-            <p>This layout uses CSS Flexbox architecture.</p>
+            <p>This layout uses CSS flexbox architecture.</p>
         </div>
     </div>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Write your message" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
 
 </body>
 </html>
